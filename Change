@@ -1,0 +1,20 @@
+# Uses python3
+
+def get_change(m):
+    #write your code here
+    money_change = 0
+    while m != 0:
+        if m >=10:
+            m -=10
+            money_change+=1
+        elif m >=5:
+            m-=5
+            money_change+=1
+        else:
+            m-=1
+            money_change+=1
+    return money_change
+
+if __name__ == '__main__':
+    m = int(input())
+    print(get_change(m))
