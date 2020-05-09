@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int num, *arr, i,swap=0,x;
+    scanf("%d", &num);
+    arr = (int*) malloc(num * sizeof(int));
+    for(i = 0; i < num; i++) {
+        scanf("%d", arr + i);
+    }
+
+
+    /* Write the logic to reverse the array. */
+    for(i=0;i<(num/2);i++)
+    {
+        x=num-1;
+        swap=*(arr+i);
+        *(arr + i)=*(arr + (x-i));
+        *(arr + (x-i)) = swap;
+    }
+
+    for(i = 0; i < num; i++)
+        printf("%d ", *(arr + i));
+    return 0;
+}
+
