@@ -1,0 +1,18 @@
+def max_pairwise_product(numbers):
+    max_product = 0
+    max_number = max(numbers)
+
+    numbers.remove(max_number)
+
+    for first in range(len(numbers)):
+        # if max_number != numbers[first]:
+        if max_number * numbers[first] > max_product:
+            max_product = max_number * numbers[first]
+
+    return max_product
+
+
+if __name__ == '__main__':
+    input_n = int(input())
+    input_numbers = [int(x) for x in input().split()]
+    print(max_pairwise_product(input_numbers))
