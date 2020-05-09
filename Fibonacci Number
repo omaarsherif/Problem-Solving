@@ -1,0 +1,15 @@
+# Uses python3
+def calc_fib(n):
+    lst = [0, 1]
+    if n <= 1:
+        return n
+
+    for index in range(2, n+1):
+
+        lst.append(lst[index-1] + lst[index-2])
+
+    return lst[n]
+
+
+n = int(input())
+print(calc_fib(n))
