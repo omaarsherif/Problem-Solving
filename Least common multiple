@@ -1,0 +1,12 @@
+def lcm_naive(a, b):
+    add = a
+    while True:
+        if a % b == 0:
+            break
+        a += add
+    return a
+if __name__ == '__main__':
+    # input = sys.stdin.read()
+    a, b = map(int, input().split())
+    print(lcm_naive(a, b))
+
