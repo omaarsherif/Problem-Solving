@@ -1,0 +1,13 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        values={}
+        
+        for i, element in enumerate(nums):
+            value = target - element
+            
+            if value in values:
+                return [values[value], i]
+            
+            values[element] = i
+            
+        return []
